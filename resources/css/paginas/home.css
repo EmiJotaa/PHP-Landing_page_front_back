@@ -1,0 +1,440 @@
+/*/*BLOCO ABA 2 definir personalizaçoes do site na are quem sou quem-sou-eu*/
+.quem-sou-eu{
+/*	definir que o site n seja afetado por outras paginas seguintes*/
+	widht: 100%;
+	display: block;
+/*	adicionar fundo no home*/
+	background-image: url('../../imagens/fundo-banner.png');
+/*	para o fundo nao se repetir*/
+	background-repeat: no-repeat;
+/*	para ele se esticar na tela toda cover sempre ocupa 100%*/
+	background-size: cover;
+}
+/*vai conter o nosso texto e conteudo a seguir*/
+.quem-sou-eu .conteudo{
+/*	ocupa a tela*/
+	width: 100%;
+	display: inline-flex;
+/*	deixa ao centro*/
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.quem-sou-eu .conteudo .img{
+	width: 100%;
+}
+.quem-sou-eu .conteudo .img img{
+	width: auto;
+	max-width: 100%;
+/*	centralizar imagem*/
+	display: block;
+	margin: 0 auto;
+}
+.quem-sou-eu .conteudo .texto{
+	width: 100%;
+/*	colocar texto acima da imagem */
+	margin-top: -50px;
+/*	margem para abaixo do botao*/
+	margin-bottom: 50px;
+}
+/*definir o tamanho e a fonte do titulo e sua distancia*/
+.quem-sou-eu .conteudo .texto h2{
+	font-size: 48px;
+	font-weight: 500;
+	font-style: italic;
+	margin-bottom: 65px;
+/*	definir posicao para o h2 e usar o after a seguir (pseudocodigo)
+ e criar traço abaixo do titulo*/
+	position: relative;
+}
+.quem-sou-eu .conteudo .texto h2:after{
+/*	tamanho do traço*/
+	width: 150px;
+/*	altura */
+	height: 5px;
+	background-color: #fff;
+/*	tornar ele preso ao titulo */
+	position: absolute;
+/*	setar ele abaixo deste titulo e sua posiçao inicial*/
+	bottom: -10px;
+	left: 0;
+/*	content para dizer q esse codigo exiter mesmo q ele esteja apenas com space*/
+	content: ' ';
+}
+/*estilizar paragrafo */
+/*definir distancimento da descricaoate o botao veja video*/
+.quem-sou-eu .conteudo .descricao{
+	margin-bottom: 60px;
+/*	comando para ele forcar ocupaçao */
+	width: 100%;
+	display: block;
+}
+.quem-sou-eu .conteudo .descricao p{
+/*	espassamento entre as linhas do paragrafo*/
+	line-height: 26px;
+/*	distanciamento entre paragrafos*/
+	margin-bottom: 30px;
+	/*	comando para ele forcar ocupaçao */
+	width: 100%;
+	display: block;
+}
+/*estilizar para desktop*/
+@media only screen and (min-width: 1024px){
+	.quem-sou-eu .conteudo .img{
+		width: 54%;
+	}
+	.quem-sou-eu .conteudo .texto{
+		width: 45%;
+	/*	colocar escrita sobre imagem com os 4 lados 
+	sendo eles na ordem cima, direita, baixo, esquerda */
+		margin: 0px 0px 0px -60px;
+	}
+}
+
+/*BLOCO PARA EVENTOS ABA 2*/
+.eventos{
+	background-color: #fff;
+	padding: 115px 0px;
+	width: 100%;
+	display: block;
+}
+.eventos .conteudo{
+	width: 100%;
+	display: block;
+}
+/*ESTILIZAR IMAGEM DA ABA 2 */
+.eventos .conteudo .itens{
+	width: 100%;
+	display: block;
+	margin-top: 70px;
+}
+.eventos .conteudo .itens .item{
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+/*	DISTANCIAMENTOS ENTRE ITENS*/
+	margin-bottom: 50px;
+}
+.eventos .conteudo .itens .item:last-child{
+	margin-bottom: 0px;
+}
+.eventos .conteudo .itens .item .img{
+	width: 100%;
+}
+.eventos .conteudo .itens .item .img img{
+	width: auto;
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.eventos .conteudo .itens .item .texto{
+	width: 100%;
+	margin-bottom: 50px;
+}
+.eventos .conteudo .itens .item .texto h3{
+	font-size: 24px;
+	font-weight: 500;
+	font-style: italic;
+	margin-bottom: 45px;
+	color: #000;
+	position: relative;
+}
+.eventos .conteudo .itens .item .texto h3:after{
+	width: 150px;
+	height: 5px;
+	background-color: #000;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	content: ' ';
+}
+/*estilizar paragrafo */
+/*definir distancimento da descricaoate o botao veja video*/
+.eventos .conteudo .itens .item .descricao{
+	width: 100%;
+	display: block;
+}
+.eventos .conteudo .itens .item .descricao p{
+	line-height: 26px;
+	margin-bottom: 30px;
+	width: 100%;
+	display: block;
+	color: #000;
+}
+/*estilizar para desktop*/
+@media only screen and (min-width: 1024px){
+	.eventos .conteudo .itens .item .img{
+		width: 50%;
+	}
+	.eventos .conteudo .itens .item .texto{
+		width: 45%;
+		margin-bottom: 0px;
+	}
+		.eventos .conteudo .itens .item:nth-child(2n+2) .img{
+		order: 0;
+	}
+	.eventos .conteudo .itens .item:nth-child(2n+2) .texto{
+		order: 1;
+	}
+}
+
+/*NOSSOS CURSOS*/
+.cursos{
+	widht: 100%;
+	display: block;
+	background-image: url('../../imagens/fundo-cursos.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 120px 0px 70px 0px;
+}
+.cursos .conteudo .itens{
+	margin-top: 70px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.cursos .conteudo .itens .item{
+	width: 100%;
+	display: block;
+	position: relative;
+	margin-bottom: 50px;
+}
+.cursos .conteudo .itens .item .img{
+	width: 100%;
+	display: block;
+
+}
+.cursos .conteudo .itens .item .img img{
+	width: 100%;
+	display: block;
+}
+.cursos .conteudo .itens .item .titulo{
+	width: 100%;
+	display: block;
+	padding: 20px;
+	position: absolute;
+	bottom: 0px;
+	font-size: 18px;
+}
+@media only screen and (min-width: 768px){
+	.cursos .conteudo .itens .item{
+		width: 48%;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.cursos .conteudo .itens .item{
+		width: 24%;
+	}
+}
+
+/*NOSSOS VIDEOS*/
+.videos{
+	background-color: #fff;
+	padding: 115px 0px;
+	width: 100%;
+	display: block;
+}
+.videos .conteudo{
+	width: 100%;
+	display: block;
+
+}
+.videos .conteudo .itens{
+	width: 100%;
+	display: block;
+	margin-top: 70px;
+}
+.videos .conteudo .itens .item{
+	width: 100%;
+	display: block;
+	padding: 0px 15px;
+}
+.videos .conteudo .itens .item .img{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.videos .conteudo .itens .item .img img{
+	width: 100%;
+	display: block;
+
+}
+.videos .conteudo .itens .item .img i{
+	font-size: 70px;
+	position: absolute;
+	color: red;
+	z-index: 1;
+}
+.videos .conteudo .itens .item .img i:after{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	content: ' ';
+	top: calc(50% - 15px);
+	left: calc(50% - 15px);
+	z-index: -1;
+}
+.videos .conteudo .itens .item .titulo{
+	width: 100%;
+	display: block;
+	color: #000;
+	font-weight: 500;
+	margin-top: 15px;
+}
+.videos .conteudo .botao{
+	width: 100%;
+	display: block;
+	margin-top: 80px;
+}
+.videos .conteudo .botao .btn{
+	width: max-content;
+	border-color: #000;
+	color: #000;
+	display: block;
+	margin: 0 auto;
+}
+.videos .conteudo .botao .btn:hover{
+	border-color: #000;
+	color: #fff;
+	background-color: #000;
+}
+
+/*BLOCO CONTATOS*/
+.contatos{
+	width: 100%;
+	display: block;
+/* distanciamento das bordas da pagina padding	*/
+	padding: 90px 0px;
+	background-image: url('../../imagens/fundo-contatos.png');
+	ackground-repeat: no-repeat;
+	background-size: cover;
+	background-position: left center;
+}
+.contatos .conteudo{
+	width: 100%;
+	display: inline-flex;
+/*	dividir em elementos com between*/
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.contatos .conteudo h2{
+	font-size: 36px;
+	font-weight: 500;
+	font-style: italic;
+	margin-bottom: 30px;
+	position: relative;
+}
+.contatos .conteudo h2:after{
+	width: 150px;
+	height: 5px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	content: ' ';
+}
+.contatos .conteudo .form{
+	width: 100%;
+	display: block;
+	margin-bottom: 50px;
+}
+.contatos .conteudo form{
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.contatos .conteudo form input{
+	width: 100%;
+	display: block;
+	margin-bottom: 25px;
+	height: 50px;
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50px;
+	padding: 0px 20px;
+}
+.contatos .conteudo form textarea{
+	width: 100%;
+	display: block;
+	margin-bottom: 25px;
+	height: 180px;
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 25px;
+	padding: 15px 20px;
+}
+.contatos .conteudo form button{
+	margin: 0 0 0 auto;
+}
+.contatos .conteudo .contato{
+	width: 100%;
+	display: block;
+}
+.contatos .conteudo .contato h3{
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+.contatos .conteudo .contato a{
+	width: 100%;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+.contatos .conteudo .contato a i{
+	font-size: 25px;
+	margin-right: 10px;
+}
+.contatos .conteudo .contato .redes-sociais{
+	width: 100%;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.contatos .conteudo .contato .redes-sociais a{
+	margin: 0 15px 0 0;
+/*	organizacao um ao lado do outro*/
+	width: max-content;
+}
+/*corrigir a linha i*/
+contatos .conteudo .contato .redes-sociais a i{
+	margin-right: 0px;
+}
+@media only screen and (min-width: 768px){
+	.contatos .conteudo form input{
+		width: 49%;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.contatos .conteudo .form{
+		width: 64%;
+		margin-bottom: 0px;
+	}
+	.contatos .conteudo .contato{
+		width: 24%;
+	}
+}
+
+
+
+
+
+
